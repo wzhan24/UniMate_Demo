@@ -112,7 +112,7 @@ The generated lattice graph is saved in `output_structure_0.txt` and can be visu
 ### 2. Predict Mechanical Properties of an Existing Structure
 
 ```bash
-# Provide a structure (see input_structure.txt for the expected format)
+# Provide a structure into input_structure.txt (within input_structure.txt a sample structure has already been written, which provides a template for the structure)
 python predict_properties.py
 # ⇒ predicted properties written to output_properties_0.txt
 ```

@@ -97,9 +97,7 @@ Below is a minimal end‑to‑end walkthrough that shows how to use UniMate in p
 ### 1. Generate a Metamaterial Topology from Target Properties
 
 ```bash
-# Specify the desired 12‑D property signature:
-# (E_x, E_y, E_z, G_xy, G_yz, G_zx, ν_xy, ν_yz, ν_zx, ν_yx, ν_zy, ν_xz)
-echo "0.25 0.25 0.25 0.12 0.12 0.12 -0.30 -0.30 -0.30 -0.30 -0.30 -0.30" > input_property.txt
+# Specify the desired 12‑D property signature into input_property.txt.
 
 # Produce a compliant structure
 python generate_structure.py

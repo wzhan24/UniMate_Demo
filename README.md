@@ -122,6 +122,7 @@ python predict_properties.py
 ```
 
 The script consumes a plain‑text node‑edge list in `input_structure.txt` and outputs the same 12‑D property vector described above.
+
 ---
 
 ## 📊 Quantitative Results
@@ -135,12 +136,12 @@ The script consumes a plain‑text node‑edge list in `input_structure.txt` and
   * **Prediction‑oriented:** `Equiformer`, `ViSNet`, `MACE+ve`, `UniTruss` – state‑of‑the‑art property predictors. We additionally adapt UniTruss for generation via its reconstruction head and re‑purposed the predictors for condition confirmation by forcing them to infer density.
 * **Metrics.**
 
-  * *Topology generation*: **F\*\*\*\*qua** (symmetry & periodicity) and **F\*\*\*\*cond** (topology‑ground truth matching).
+  * *Topology generation*: **F_qua** (symmetry & periodicity) and **F_cond** (topology‑ground truth matching).
   * *Prediction & confirmation*: **NRMSE** between predicted and ground‑truth values (lower is better).
 
 ### Effectiveness Comparison
 
-| Model              | Fqua ↓ (×10‑2) | Fcond ↓ (×10‑2) | NRMSEpp ↓ (×10‑2) | NRMSEcc ↓ (×10‑2) |
+| Model              | F_qua ↓ (×10‑2) | F_cond ↓ (×10‑2) | NRMSE_pp ↓ (×10‑2) | NRMSE_cc ↓ (×10‑2) |
 | ------------------ | -------------- | --------------- | ----------------- | ----------------- |
 | CDVAE              | 19.23          | 32.71           | N/A               | N/A               |
 | Equiformer         | N/A            | N/A             | 5.31              | 38.05             |

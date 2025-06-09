@@ -122,6 +122,41 @@ python predict_properties.py
 ```
 
 The script consumes a plain‑text node‑edge list in `input_structure.txt` and outputs the same 12‑D property vector described above.
+---
+
+## 📊 Quantitative Results
+
+### Datasets & Baselines
+
+* **Dataset.** Existing benchmarks do not jointly cover topology generation, property prediction, and condition confirmation. We therefore construct a new dataset derived from *Modulus* by (i) selecting a diverse subset of topologies, (ii) assigning multiple density conditions to each lattice, and (iii) computing full mechanical responses via finite‑element simulation (see the paper Appendix for details).
+* **Baselines.** We compare UniMate with six strong alternatives:
+
+  * **Generation‑oriented:** `CDVAE`, `SyMat` – both designed for periodic crystal structure synthesis.
+  * **Prediction‑oriented:** `Equiformer`, `ViSNet`, `MACE+ve`, `UniTruss` – state‑of‑the‑art property predictors. We additionally adapt UniTruss for generation via its reconstruction head and re‑purposed the predictors for condition confirmation by forcing them to infer density.
+* **Metrics.**
+
+  * *Topology generation*: **F\*\*\*\*qua** (symmetry & periodicity) and **F\*\*\*\*cond** (topology‑ground truth matching).
+  * *Prediction & confirmation*: **NRMSE** between predicted and ground‑truth values (lower is better).
+
+### Effectiveness Comparison
+
+| Model              | Fqua ↓ (×10‑2) | Fcond ↓ (×10‑2) | NRMSEpp ↓ (×10‑2) | NRMSEcc ↓ (×10‑2) |
+| ------------------ | -------------- | --------------- | ----------------- | ----------------- |
+| CDVAE              | 19.23          | 32.71           | N/A               | N/A               |
+| Equiformer         | N/A            | N/A             | 5.31              | 38.05             |
+| ViSNet             | N/A            | N/A             | 3.12              | 10.43             |
+| SyMat              | 16.94          | 33.37           | N/A               | N/A               |
+| UniTruss           | 19.43          | 33.77           | 2.71              | 8.89              |
+| MACE+ve            | N/A            | N/A             | 2.57              | 9.09              |
+| **UniMate (Ours)** | **2.74**       | **7.81**        | **2.44**          | **4.43**          |
+
+**Key takeaways.** UniMate delivers consistent, large‑margin improvements across all three tasks. Against the strongest competitor in each column it achieves:
+
+* **80.2 %** relative error reduction in conditional topology generation (Fqua),
+* **5.1 %** lower prediction error on mechanical properties, and
+* **50.2 %** lower error in condition confirmation.
+
+These results highlight UniMate’s ability to *synergistically leverage* topology, density, and property information instead of treating them in isolation.
 
 ---
 

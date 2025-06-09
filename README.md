@@ -143,6 +143,16 @@ The script consumes a plain‑text node‑edge list in `input_structure.txt` and
 
 ---
 
+## Contact
+Wangzhi Zhan, Virginia Tech PhD student, wzhan24@vt.edu
+
+---
+
+## Funding Details
+This work is supported by the National Science Foundation under Award No. IIS-2339989 and No. 2406439, DARPA under contract No. HR00112490370 and No. HR001124S0013, U.S. Department of Homeland Security under Grant Award No. 17STCIN00001-08-00,  Amazon-Virginia Tech Initiative for Efficient and Robust Machine Learning, Amazon AWS, Google, Cisco, 4-VA, Commonwealth Cyber Initiative, National Surface Transportation Safety Center for Excellence, and Virginia Tech.
+
+---
+
 ## 📄 License
 
 Distributed under the MIT License.  See [`LICENSE`](./LICENSE) for

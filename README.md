@@ -42,7 +42,7 @@ confirmation**.
 > 3. **Confirm viable density ranges** for a target structure & property
 >    set
 
-![framework](C:\Users\ricar\Downloads\framework.png)
+![UniMate Framework](./framework.png)
 
 
 ---

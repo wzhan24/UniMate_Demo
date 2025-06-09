@@ -1,6 +1,7 @@
 # UniMate
 ---
 ## DARPA WAR Summary
+
 Assessing feasibility of scientific claims in the material science domain requires correctly modeling potentially novel material structure and accurately determining the material properties. We created UNIMATE, an advanced AI system for mechanical metamaterial modeling and design, which was accepted to ICML 2025, a leading venue in artificial intelligence research. UNIMATE is the first model to unify three core tasks in metamaterials research within a single framework, i.e., generating material structures, predicting their physical properties, and confirming whether they meet specific design constraints. It significantly outperforms prior methods across all tasks, including an 80% improvement in structural generation quality. This accomplishment marks a major step forward in machine learning for material validation and scientific discovery.
 ---
 
